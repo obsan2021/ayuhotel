@@ -1,9 +1,7 @@
 // Main JavaScript for Ayu International Hotel
 
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Mobile Navigation Toggle
+// Mobile Navigation Toggle Function
+function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
@@ -12,7 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
     }
+}
+
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Initialize mobile menu
+    initMobileMenu();
     
     // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,0 +1,56 @@
+{
+    "rooms": [
+        {
+            "id": "standard",
+            "name": "Standard Room",
+            "price": 65,
+            "currency": "USD",
+            "size": "25 m²",
+            "bed": "1 Queen or 2 Twin",
+            "max_guests": 2,
+            "view": "City or Garden",
+            "amenities": ["Air Conditioning", "Smart TV", "Minibar", "Work Desk", "Free WiFi", "Ensuite Shower"],
+            "images": ["assets/images/rooms/standard/standard-1.jpg", "assets/images/rooms/standard/standard-2.jpg"],
+            "description": "Comfortable and elegant standard room perfect for business travelers and couples."
+        },
+        {
+            "id": "deluxe",
+            "name": "Deluxe Room",
+            "price": 95,
+            "currency": "USD",
+            "size": "35 m²",
+            "bed": "1 King",
+            "max_guests": 2,
+            "view": "Pool or Mountain",
+            "amenities": ["Bathtub", "Bathrobe", "Slippers", "Seating Area", "All Standard Amenities"],
+            "images": ["assets/images/rooms/deluxe/deluxe-1.jpg", "assets/images/rooms/deluxe/deluxe-2.jpg"],
+            "description": "Spacious deluxe room with premium amenities and stunning views."
+        },
+        {
+            "id": "executive",
+            "name": "Executive Suite",
+            "price": 150,
+            "currency": "USD",
+            "size": "55 m²",
+            "bed": "1 King + Sofa Bed",
+            "max_guests": 3,
+            "view": "Panoramic City",
+            "amenities": ["Separate Living Room", "Dining Table", "2 TVs", "Guest Toilet", "VIP Amenities", "Airport Transfer"],
+            "images": ["assets/images/rooms/executive/executive-1.jpg", "assets/images/rooms/executive/executive-living.jpg"],
+            "description": "Our luxurious executive suite with separate living area for the ultimate comfort."
+        },
+        {
+            "id": "family",
+            "name": "Family Room",
+            "price": 120,
+            "currency": "USD",
+            "size": "45 m²",
+            "bed": "2 Queen Beds",
+            "max_guests": 4,
+            "view": "Garden",
+            "amenities": ["Connecting Rooms Option", "Kid Friendly", "Extra Storage", "All Deluxe Amenities"],
+            "images": ["assets/images/rooms/family/family-room.jpg"],
+            "description": "Perfect for families, offering space and comfort for everyone."
+        }
+    ]
+}

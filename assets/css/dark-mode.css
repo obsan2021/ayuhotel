@@ -1,0 +1,38 @@
+/* Dark Mode Styles (Optional) */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #c9a227;
+        --secondary-color: #2c2c2c;
+        --accent-color: #3a4a5a;
+        --text-color: #e0e0e0;
+        --light-color: #1a1a1a;
+        --white: #2a2a2a;
+    }
+    
+    body {
+        background-color: #121212;
+    }
+    
+    .booking-form {
+        background-color: var(--white);
+        color: var(--text-color);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background-color: #1a1a1a;
+        color: var(--text-color);
+        border-color: #444;
+    }
+    
+    .room-card {
+        background-color: var(--white);
+        border-color: #444;
+    }
+    
+    .booking-summary {
+        background-color: #1a1a1a;
+    }
+}

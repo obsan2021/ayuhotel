@@ -1,0 +1,54 @@
+{
+    "site": {
+        "name": "አዩ ሆቴል",
+        "tagline": "በአዳማ ኢትዮጵያ የልዑል አቅም ቤት አልባለ"
+    },
+    "nav": {
+        "home": "መነሻ",
+        "rooms": "ክፍሎች",
+        "dining": "ምግብ",
+        "facilities": "አገልግሎቶች",
+        "events": "ዝግጅቶች",
+        "gallery": "ሥዕሎች",
+        "about": "ስለ እኛ",
+        "contact": "ያግኙን",
+        "book": "ይጠይቁ"
+    },
+    "home": {
+        "welcome": "እንኳን ወደ አዩ ሆቴል መጡ",
+        "subtitle": "በአዳማ ኢትዮጵያ የልዑል አቅም ቤት አልባለ",
+        "cta": "ይጠይቁ"
+    },
+    "rooms": {
+        "title": "የእኛ ክፍሎች",
+        "standard": "መደበኛ ክፍል",
+        "deluxe": "ዲሉክስ ክፍል",
+        "executive": "ኤክስኪዩቲቭ ሱይት",
+        "family": "ቤተሰብ ክፍል"
+    },
+    "booking": {
+        "title": "ይጠይቁ",
+        "checkIn": "ገብበዋል",
+        "checkOut": "ወጡ",
+        "guests": "እንግዶች",
+        "roomType": "የክፍል ዓይነት",
+        "promoCode": "ፕሮሞ ኮድ",
+        "submit": "አስተያይቁ"
+    },
+    "contact": {
+        "title": "ያግኙን",
+        "name": "ስም",
+        "email": "ኢሜይል",
+        "phone": "ስልክ",
+        "message": "መልእክት",
+        "send": "ላክ"
+    },
+    "footer": {
+        "about": "ስለ አዩ ሆቴል",
+        "quickLinks": "ፈጣን አገናኞች",
+        "contactInfo": "የመገናኛ መረጃ",
+        "newsletter": "ዜና",
+        "subscribe": "ተመዝግቡ",
+        "copyright": "© 2024 አዩ ሆቴል. መብቱ በሙሉ የተጠበቀ ነው።"
+    }
+}

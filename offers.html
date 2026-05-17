@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers - Ayu International Hotel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Special Offers & Packages</h1>
+            <p>Get the best value for your stay</p>
+        </div>
+    </section>
+
+    <section class="offers-section container">
+        <div class="offers-grid">
+            <div class="offer-card featured">
+                <div class="offer-badge">Best Value</div>
+                <h2>Early Bird Discount</h2>
+                <p>Book 7 days in advance and save 15% on all room types</p>
+                <div class="offer-details">
+                    <p><i class="fas fa-check"></i> Free breakfast included</p>
+                    <p><i class="fas fa-check"></i> Flexible cancellation</p>
+                    <p><i class="fas fa-check"></i> Best price guaranteed</p>
+                </div>
+                <div class="offer-price">
+                    <span class="old-price">$100</span>
+                    <span class="new-price">$85</span>
+                    <span>/night</span>
+                </div>
+                <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+
+            <div class="offer-card">
+                <h2>Stay 4 Pay 3</h2>
+                <p>Book 4 nights and pay for only 3 nights</p>
+                <div class="offer-details">
+                    <p><i class="fas fa-check"></i> Valid for all room types</p>
+                    <p><i class="fas fa-check"></i> Free airport pickup</p>
+                </div>
+                <div class="offer-price">
+                    <span>Save 25%</span>
+                </div>
+                <a href="booking.html" class="btn-outline">Book Now</a>
+            </div>
+
+            <div class="offer-card">
+                <h2>Honeymoon Package</h2>
+                <p>Romantic getaway for couples</p>
+                <div class="offer-details">
+                    <p><i class="fas fa-check"></i> 3 nights in Executive Suite</p>
+                    <p><i class="fas fa-check"></i> Candlelit dinner</p>
+                    <p><i class="fas fa-check"></i> Rose petals on bed</p>
+                    <p><i class="fas fa-check"></i> Late checkout (3 PM)</p>
+                </div>
+                <div class="offer-price">
+                    <span class="old-price">$600</span>
+                    <span class="new-price">$450</span>
+                </div>
+                <a href="booking.html" class="btn-outline">Book Now</a>
+            </div>
+
+            <div class="offer-card">
+                <h2>Corporate Rate</h2>
+                <p>Special rates for business travelers</p>
+                <div class="offer-details">
+                    <p><i class="fas fa-check"></i> 20% off on all rooms</p>
+                    <p><i class="fas fa-check"></i> Free conference room access</p>
+                    <p><i class="fas fa-check"></i> Priority check-in</p>
+                </div>
+                <div class="offer-price">
+                    <span>From $52/night</span>
+                </div>
+                <a href="booking.html" class="btn-outline">Book Now</a>
+            </div>
+
+            <div class="offer-card">
+                <h2>Weekend Getaway</h2>
+                <p>Perfect Friday to Sunday escape</p>
+                <div class="offer-details">
+                    <p><i class="fas fa-check"></i> 2 nights with breakfast</p>
+                    <p><i class="fas fa-check"></i> Free pool access</p>
+                    <p><i class="fas fa-check"></i> 10% off at spa</p>
+                </div>
+                <div class="offer-price">
+                    <span class="old-price">$190</span>
+                    <span class="new-price">$160</span>
+                </div>
+                <a href="booking.html" class="btn-outline">Book Now</a>
+            </div>
+
+            <div class="offer-card">
+                <h2>Group Booking Discount</h2>
+                <p>Book 5+ rooms and save big</p>
+                <div class="offer-details">
+                    <p><i class="fas fa-check"></i> 25% discount on all rooms</p>
+                    <p><i class="fas fa-check"></i> One free room for organizer</p>
+                    <p><i class="fas fa-check"></i> Free meeting room</p>
+                </div>
+                <div class="offer-price">
+                    <span>Contact for quote</span>
+                </div>
+                <a href="contact.html" class="btn-outline">Inquire Now</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('includes/header.html').then(r=>r.text()).then(d=>document.getElementById('header').innerHTML=d);
+        fetch('includes/footer.html').then(r=>r.text()).then(d=>document.getElementById('footer').innerHTML=d);
+    </script>
+
+    <style>
+        .offers-section {
+            padding: 60px 0;
+        }
+        
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .offer-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .offer-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .offer-card.featured {
+            border: 2px solid var(--secondary-color);
+            background: linear-gradient(135deg, white, #FFF9E6);
+        }
+        
+        .offer-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--secondary-color);
+            color: var(--text-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .offer-card h2 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .offer-details {
+            margin: 20px 0;
+        }
+        
+        .offer-details p {
+            margin-bottom: 10px;
+        }
+        
+        .offer-details i {
+            color: var(--success);
+            margin-right: 10px;
+        }
+        
+        .offer-price {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            margin-right: 10px;
+        }
+        
+        .new-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

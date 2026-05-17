@@ -1,0 +1,25 @@
+{
+    "reviews": [
+        {
+            "name": "Sarah Johnson",
+            "country": "USA",
+            "rating": 5,
+            "comment": "Amazing service! The staff was incredibly friendly and the rooms were spotless. The Ethiopian coffee ceremony was a highlight!",
+            "date": "2025-01-15"
+        },
+        {
+            "name": "Tsegaye Mulugeta",
+            "country": "Ethiopia",
+            "rating": 4.8,
+            "comment": "Best hotel in Adama. The conference facilities are excellent and the food is delicious. Will definitely come back.",
+            "date": "2025-02-10"
+        },
+        {
+            "name": "Michael Chen",
+            "country": "China",
+            "rating": 5,
+            "comment": "Very impressed with the service and facilities. The pool is beautiful and the location is convenient.",
+            "date": "2025-01-28"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+RewriteEngine On
+
+# Force HTTPS (uncomment when SSL is installed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Custom error pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Cache control
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|webp)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Compress files
+AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript

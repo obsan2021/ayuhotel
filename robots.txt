@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /php/
+Disallow: /data/
+Disallow: /logs/
+Disallow: /backups/
+
+Sitemap: https://www.ayuhotel.com/sitemap.xml

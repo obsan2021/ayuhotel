@@ -1,0 +1,44 @@
+{
+    "offers": [
+        {
+            "id": 1,
+            "title": "Early Bird Special",
+            "description": "Book 30 days in advance and get 20% off",
+            "discount": 20,
+            "validUntil": "2024-12-31",
+            "code": "EARLY20",
+            "terms": "Valid for new bookings only. Cannot be combined with other offers.",
+            "image": "offer-1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Weekend Getaway",
+            "description": "Stay 2 nights on weekend and get 1 night free",
+            "discount": 33,
+            "validUntil": "2024-06-30",
+            "code": "WEEKEND33",
+            "terms": "Valid for Friday-Sunday stays. Subject to availability.",
+            "image": "offer-2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Honeymoon Package",
+            "description": "Romantic package with champagne, flowers, and late checkout",
+            "discount": 15,
+            "validUntil": "2024-12-31",
+            "code": "HONEYMOON15",
+            "terms": "Valid for couples only. Marriage certificate may be required.",
+            "image": "offer-3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Business Traveler",
+            "description": "Special rates for corporate bookings with free airport transfer",
+            "discount": 10,
+            "validUntil": "2024-12-31",
+            "code": "BUSINESS10",
+            "terms": "Valid for business travelers with corporate ID.",
+            "image": "offer-4.jpg"
+        }
+    ]
+}

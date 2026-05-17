@@ -1,0 +1,54 @@
+{
+    "site": {
+        "name": "Ayu Hotel",
+        "tagline": "Adama, Ethiopia keessaa qabxii olaanaa"
+    },
+    "nav": {
+        "home": "Mana",
+        "rooms": "Manneen",
+        "dining": "Nyaata",
+        "facilities": "Gorguddoo",
+        "events": "Taasiseewwan",
+        "gallery": "Suuraa",
+        "about": "Waa'ee keenya",
+        "contact": "Nu qunqurri",
+        "book": "Galmeessi"
+    },
+    "home": {
+        "welcome": "Ayu Hotel dhufu",
+        "subtitle": "Adama, Ethiopia keessaa qabxii olaanaa",
+        "cta": "Galmeessi"
+    },
+    "rooms": {
+        "title": "Manneen keenya",
+        "standard": "Mana addaa",
+        "deluxe": "Mana deelaaksii",
+        "executive": "Mana ekisekiyuutivii",
+        "family": "Mana warra"
+    },
+    "booking": {
+        "title": "Galmeessi",
+        "checkIn": "Seenu",
+        "checkOut": "Ba'u",
+        "guests": "Daayimoota",
+        "roomType": "Mana addaa",
+        "promoCode": "Koodii promoo",
+        "submit": "Ilaali"
+    },
+    "contact": {
+        "title": "Nu qunqurri",
+        "name": "Maqaa",
+        "email": "Imeelii",
+        "phone": "Bilbila",
+        "message": "Mataa",
+        "send": "Ergi"
+    },
+    "footer": {
+        "about": "Waa'ee Ayu Hotel",
+        "quickLinks": "Linkiinwwan dhiyaataa",
+        "contactInfo": "Oduu qunqursaa",
+        "newsletter": "Oduu",
+        "subscribe": "Galmeessi",
+        "copyright": "© 2024 Ayu Hotel. Mirkaneessi hunda ofi keessaa qabama."
+    }
+}

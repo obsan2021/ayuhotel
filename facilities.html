@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities - Ayu International Hotel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Hotel Facilities</h1>
+            <p>World-class amenities for your comfort and enjoyment</p>
+        </div>
+    </section>
+
+    <section class="facilities-section container">
+        <div class="facility-detail">
+            <div class="facility-icon">
+                <i class="fas fa-swimmer"></i>
+            </div>
+            <div class="facility-info">
+                <h2>Swimming Pool</h2>
+                <p>Outdoor heated swimming pool with stunning views of the surrounding landscape.</p>
+                <ul>
+                    <li><strong>Hours:</strong> 6:00 AM - 10:00 PM</li>
+                    <li><strong>Pool Depth:</strong> 1.2m - 2.0m</li>
+                    <li><strong>Temperature:</strong> Heated (26°C - 28°C)</li>
+                    <li><strong>For Hotel Guests:</strong> Free access</li>
+                    <li><strong>Day Pass:</strong> 500 ETB (includes towel & locker)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="facility-detail">
+            <div class="facility-icon">
+                <i class="fas fa-dumbbell"></i>
+            </div>
+            <div class="facility-info">
+                <h2>Fitness Center</h2>
+                <p>State-of-the-art gym equipment available 24/7 for all hotel guests.</p>
+                <ul>
+                    <li><strong>Hours:</strong> 24/7</li>
+                    <li><strong>Equipment:</strong> Treadmills, Ellipticals, Free Weights, Weight Machines</li>
+                    <li><strong>Personal Trainer:</strong> Available on request (500 ETB/hour)</li>
+                    <li><strong>Free for hotel guests</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="facility-detail">
+            <div class="facility-icon">
+                <i class="fas fa-spa"></i>
+            </div>
+            <div class="facility-info">
+                <h2>Spa & Wellness</h2>
+                <p>Rejuvenate your body and mind with our traditional Ethiopian massage treatments.</p>
+                <ul>
+                    <li><strong>Hours:</strong> 9:00 AM - 9:00 PM</li>
+                    <li><strong>Massages:</strong> Swedish, Deep Tissue, Ethiopian Traditional</li>
+                    <li><strong>Price:</strong> From 800 ETB (30 min) to 2000 ETB (90 min)</li>
+                    <li><strong>Sauna & Steam Room:</strong> 300 ETB</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="facility-detail">
+            <div class="facility-icon">
+                <i class="fas fa-chalkboard-user"></i>
+            </div>
+            <div class="facility-info">
+                <h2>Conference & Event Halls</h2>
+                <p>Professional event spaces for business meetings, weddings, and social gatherings.</p>
+                <ul>
+                    <li><strong>Hall A:</strong> Up to 300 guests (Theater style)</li>
+                    <li><strong>Hall B:</strong> Up to 100 guests (Boardroom style)</li>
+                    <li><strong>Outdoor Garden:</strong> Up to 200 guests</li>
+                    <li><strong>Equipment:</strong> Projector, Sound System, WiFi, Whiteboard</li>
+                    <li><strong>Contact us for pricing</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="facility-detail">
+            <div class="facility-icon">
+                <i class="fas fa-wifi"></i>
+            </div>
+            <div class="facility-info">
+                <h2>Business Center</h2>
+                <p>Fully equipped business center for corporate travelers.</p>
+                <ul>
+                    <li><strong>Hours:</strong> 8:00 AM - 8:00 PM</li>
+                    <li><strong>Services:</strong> Printing, Scanning, Fax, Secretarial Services</li>
+                    <li><strong>Computer Rental:</strong> 200 ETB/hour</li>
+                    <li><strong>Free WiFi throughout the hotel</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="facility-detail">
+            <div class="facility-icon">
+                <i class="fas fa-shuttle-van"></i>
+            </div>
+            <div class="facility-info">
+                <h2>Transportation Services</h2>
+                <ul>
+                    <li><strong>Airport Shuttle:</strong> 1500 ETB (Addis Ababa Bole Airport)</li>
+                    <li><strong>City Tour:</strong> 2000 ETB (Half day)</li>
+                    <li><strong>Car Rental:</strong> Available at reception</li>
+                    <li><strong>Free Parking:</strong> 50+ spaces with 24/7 security</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('includes/header.html').then(r=>r.text()).then(d=>document.getElementById('header').innerHTML=d);
+        fetch('includes/footer.html').then(r=>r.text()).then(d=>document.getElementById('footer').innerHTML=d);
+    </script>
+
+    <style>
+        .facilities-section {
+            padding: 60px 0;
+        }
+        
+        .facility-detail {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .facility-detail:hover {
+            transform: translateX(10px);
+        }
+        
+        .facility-icon {
+            font-size: 60px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        .facility-info h2 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .facility-info ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        
+        .facility-info li {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .facility-detail {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .facility-info ul {
+                text-align: left;
+            }
+        }
+    </style>
+</body>
+</html>

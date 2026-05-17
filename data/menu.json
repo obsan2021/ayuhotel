@@ -1,0 +1,108 @@
+{
+    "menu": {
+        "breakfast": [
+            {
+                "id": 1,
+                "name": "Ethiopian Breakfast",
+                "description": "Injera with various stews and fresh coffee",
+                "price": 15,
+                "image": "breakfast-buffet.jpg",
+                "available": true
+            },
+            {
+                "id": 2,
+                "name": "Continental Breakfast",
+                "description": "Pastries, fruits, cereals, and coffee",
+                "price": 12,
+                "image": "continental-breakfast.jpg",
+                "available": true
+            },
+            {
+                "id": 3,
+                "name": "American Breakfast",
+                "description": "Eggs, bacon, toast, and coffee",
+                "price": 14,
+                "image": "american-breakfast.jpg",
+                "available": true
+            }
+        ],
+        "lunch": [
+            {
+                "id": 4,
+                "name": "Doro Wat",
+                "description": "Spicy chicken stew with injera",
+                "price": 18,
+                "image": "doro-wat.jpg",
+                "available": true
+            },
+            {
+                "id": 5,
+                "name": "Tibs",
+                "description": "Grilled meat with vegetables",
+                "price": 20,
+                "image": "tibs.jpg",
+                "available": true
+            },
+            {
+                "id": 6,
+                "name": "International Platter",
+                "description": "Mixed grill with various sides",
+                "price": 25,
+                "image": "international-platter.jpg",
+                "available": true
+            }
+        ],
+        "dinner": [
+            {
+                "id": 7,
+                "name": "Kitfo",
+                "description": "Minced beef with spices and butter",
+                "price": 22,
+                "image": "kitfo.jpg",
+                "available": true
+            },
+            {
+                "id": 8,
+                "name": "Grilled Fish",
+                "description": "Fresh Nile perch with vegetables",
+                "price": 24,
+                "image": "grilled-fish.jpg",
+                "available": true
+            },
+            {
+                "id": 9,
+                "name": "Vegetarian Platter",
+                "description": "Assorted vegetarian dishes",
+                "price": 18,
+                "image": "vegetarian-platter.jpg",
+                "available": true
+            }
+        ],
+        "drinks": [
+            {
+                "id": 10,
+                "name": "Ethiopian Coffee",
+                "description": "Traditional coffee ceremony",
+                "price": 8,
+                "image": "coffee-ceremony.jpg",
+                "available": true
+            },
+            {
+                "id": 11,
+                "name": "Fresh Juice",
+                "description": "Seasonal fruit juices",
+                "price": 6,
+                "image": "fresh-juice.jpg",
+                "available": true
+            },
+            {
+                "id": 12,
+                "name": "Local Beer",
+                "description": "Ethiopian draft beer",
+                "price": 5,
+                "image": "local-beer.jpg",
+                "available": true
+            }
+        ]
+    }
+}

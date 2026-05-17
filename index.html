@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayu International Hotel - Luxury hotel in Adama, Ethiopia. Book rooms, events, dining with best prices.">
+    <meta name="keywords" content="hotel Adama, Ayu Hotel, Ethiopia hotels, luxury hotel Adama">
+    <meta name="author" content="Ayu International Hotel">
+    <title>Ayu International Hotel | Luxury Stay in Adama, Ethiopia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" href="assets/images/logo/favicon.ico">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Ayu International Hotel</h1>
+            <p class="hero-subtitle">Experience Luxury, Ethiopian Hospitality & Comfort in Adama</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn-primary">Book Now <i class="fas fa-arrow-right"></i></a>
+                <a href="rooms.html" class="btn-secondary">View Rooms <i class="fas fa-bed"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <div class="info-bar">
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Adama, Ethiopia</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span>+251-XX-XXX-XXXX</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-wifi"></i>
+            <span>Free WiFi</span>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-parking"></i>
+            <span>Free Parking</span>
+        </div>
+    </div>
+
+    <!-- About Preview -->
+    <section class="about-preview container">
+        <div class="about-text">
+            <h2>Welcome to Ayu International Hotel</h2>
+            <p>Located in the heart of Adama (Nazret), Ayu International Hotel blends modern elegance with Ethiopian tradition. Whether you're on business or leisure, we offer a peaceful retreat just 90 km from Addis Ababa.</p>
+            <p>Our name <strong>"Ayu"</strong> means <em>"beautiful life"</em> in Oromo, reflecting our commitment to comfort and joy.</p>
+            <a href="about.html" class="btn-outline">Learn More About Us</a>
+        </div>
+        <div class="about-image">
+            <img src="assets/images/gallery/lobby/hotel-lobby.jpg" alt="Ayu Hotel Lobby">
+        </div>
+    </section>
+
+    <!-- Rooms Preview -->
+    <section class="rooms-preview container">
+        <h2>Our Luxury Rooms & Suites</h2>
+        <p class="section-subtitle">Choose from our carefully designed rooms for the perfect stay</p>
+        <div class="room-grid" id="room-grid">
+            <!-- Rooms loaded from JSON -->
+        </div>
+        <div class="text-center">
+            <a href="rooms.html" class="btn-primary">View All Rooms</a>
+        </div>
+    </section>
+
+    <!-- Facilities Highlight -->
+    <section class="facilities-highlight">
+        <div class="container">
+            <h2>World-Class Facilities</h2>
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <i class="fas fa-swimmer"></i>
+                    <h3>Swimming Pool</h3>
+                    <p>Outdoor heated pool with poolside bar</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Fitness Center</h3>
+                    <p>24/7 gym with modern equipment</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Spa & Wellness</h3>
+                    <p>Relaxing massages and treatments</p>
+                </div>
+                <div class="facility-card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <h3>Conference Halls</h3>
+                    <p>Event spaces for up to 500 guests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="offer-banner">
+        <div class="offer-content">
+            <h3>Special Offer!</h3>
+            <p>Book 7 days in advance and get <strong>15% off</strong> on all room types</p>
+            <a href="offers.html" class="btn-primary">View All Offers</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials container">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonial-grid" id="testimonial-grid">
+            <!-- Testimonials loaded from JSON -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/booking.js"></script>
+    <script>
+        // Load header and footer
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+        
+        // Load rooms from JSON
+        fetch('data/rooms.json')
+            .then(response => response.json())
+            .then(data => {
+                const roomGrid = document.getElementById('room-grid');
+                const roomsToShow = data.rooms.slice(0, 4);
+                roomGrid.innerHTML = roomsToShow.map(room => `
+                    <div class="room-card">
+                        <img src="${room.images[0]}" alt="${room.name}">
+                        <div class="room-info">
+                            <h3>${room.name}</h3>
+                            <p>${room.size} | ${room.bed}</p>
+                            <div class="room-price">$${room.price} <span>/ night</span></div>
+                            <a href="booking.html?room=${room.id}" class="btn-small">Book Now</a>
+                        </div>
+                    </div>
+                `).join('');
+            });
+        
+        // Load testimonials
+        fetch('data/testimonials.json')
+            .then(response => response.json())
+            .then(data => {
+                const testimonialGrid = document.getElementById('testimonial-grid');
+                testimonialGrid.innerHTML = data.reviews.map(review => `
+                    <div class="testimonial-card">
+                        <i class="fas fa-star"></i>
+                        <p>"${review.comment}"</p>
+                        <h4>- ${review.name}</h4>
+                        <small>${review.country}</small>
+                    </div>
+                `).join('');
+            });
+    </script>
+</body>
+</html>

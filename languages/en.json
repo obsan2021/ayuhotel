@@ -1,0 +1,54 @@
+{
+    "site": {
+        "name": "Ayu Hotel",
+        "tagline": "Luxury Accommodation in Adama, Ethiopia"
+    },
+    "nav": {
+        "home": "Home",
+        "rooms": "Rooms",
+        "dining": "Dining",
+        "facilities": "Facilities",
+        "events": "Events",
+        "gallery": "Gallery",
+        "about": "About",
+        "contact": "Contact",
+        "book": "Book Now"
+    },
+    "home": {
+        "welcome": "Welcome to Ayu Hotel",
+        "subtitle": "Your luxury destination in Adama, Ethiopia",
+        "cta": "Book Your Stay"
+    },
+    "rooms": {
+        "title": "Our Rooms & Suites",
+        "standard": "Standard Room",
+        "deluxe": "Deluxe Room",
+        "executive": "Executive Suite",
+        "family": "Family Room"
+    },
+    "booking": {
+        "title": "Book Your Stay",
+        "checkIn": "Check-in",
+        "checkOut": "Check-out",
+        "guests": "Guests",
+        "roomType": "Room Type",
+        "promoCode": "Promo Code",
+        "submit": "Check Availability"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message",
+        "send": "Send Message"
+    },
+    "footer": {
+        "about": "About Ayu Hotel",
+        "quickLinks": "Quick Links",
+        "contactInfo": "Contact Info",
+        "newsletter": "Newsletter",
+        "subscribe": "Subscribe",
+        "copyright": "© 2024 Ayu Hotel. All rights reserved."
+    }
+}

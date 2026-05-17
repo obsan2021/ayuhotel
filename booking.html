@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Ayu International Hotel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Stay</h1>
+            <p>Secure your room at Ayu International Hotel</p>
+        </div>
+    </section>
+
+    <section class="booking-section container">
+        <div class="booking-container">
+            <form id="booking-form" action="php/booking-process.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkin">Check-in Date *</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Check-out Date *</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="room_type">Room Type *</label>
+                        <select id="room_type" name="room_type" required>
+                            <option value="">Select Room</option>
+                            <option value="standard">Standard Room - $65/night</option>
+                            <option value="deluxe">Deluxe Room - $95/night</option>
+                            <option value="executive">Executive Suite - $150/night</option>
+                            <option value="family">Family Room - $120/night</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <input type="number" id="guests" name="guests" min="1" max="4" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="special_requests">Special Requests</label>
+                    <textarea id="special_requests" name="special_requests" rows="3" placeholder="Any special requirements?"></textarea>
+                </div>
+
+                <div class="price-summary">
+                    <h3>Price Summary</h3>
+                    <div class="price-details">
+                        <p>Room Price: <span id="room-price-display">$0</span></p>
+                        <p>Total Nights: <span id="total-nights">0</span></p>
+                        <p>Extra Guests: <span id="extra-guest-charge">$0</span></p>
+                        <hr>
+                        <p><strong>Total: <span id="total-price">$0</span></strong></p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('includes/header.html').then(r=>r.text()).then(d=>document.getElementById('header').innerHTML=d);
+        fetch('includes/footer.html').then(r=>r.text()).then(d=>document.getElementById('footer').innerHTML=d);
+
+        const roomPrices = { standard: 65, deluxe: 95, executive: 150, family: 120 };
+
+        function calculatePrice() {
+            const roomType = document.getElementById('room_type').value;
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const guests = parseInt(document.getElementById('guests').value) || 1;
+
+            if (roomType && checkin && checkout) {
+                const nights = (new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24);
+                if (nights > 0) {
+                    const basePrice = roomPrices[roomType] * nights;
+                    const extraGuests = guests > 2 ? (guests - 2) * 20 * nights : 0;
+                    const total = basePrice + extraGuests;
+                    
+                    document.getElementById('room-price-display').innerText = `$${basePrice}`;
+                    document.getElementById('total-nights').innerText = nights;
+                    document.getElementById('extra-guest-charge').innerText = `$${extraGuests}`;
+                    document.getElementById('total-price').innerText = `$${total}`;
+                }
+            }
+        }
+
+        document.getElementById('room_type').addEventListener('change', calculatePrice);
+        document.getElementById('checkin').addEventListener('change', calculatePrice);
+        document.getElementById('checkout').addEventListener('change', calculatePrice);
+        document.getElementById('guests').addEventListener('input', calculatePrice);
+    </script>
+</body>
+</html>
